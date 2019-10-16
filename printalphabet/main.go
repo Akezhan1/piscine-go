@@ -8,5 +8,4 @@ func main() {
 		z01.PrintRune(i)
 	}
 	z01.PrintRune('\n')
-}
-for i := 'a'; i <= 'z'; i++
+}for i := 'a'; i <= 'z'; i++
