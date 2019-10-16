@@ -1,7 +1,7 @@
 package main 
 
 import (
-	"z01"
+	"github.com/01-edu/z01"
 )
 
 func main(){
