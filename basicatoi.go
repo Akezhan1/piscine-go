@@ -1,5 +1,4 @@
 package main
-
 func BasicAtoi(s string) {
 	runes := []rune(s)
 	var final int
@@ -17,6 +16,4 @@ func BasicAtoi(s string) {
 	for i := range runes {
 		final = final*10 + res[i]
 	}
-
-	fmt.Println(final)
 }
