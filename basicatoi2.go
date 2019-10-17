@@ -10,7 +10,7 @@ func BasicAtoi2(s string) int {
 				res = res*10 + a
 		} else {
 			res = 0
-		}
+			}
 		}
 	}
 	return res
