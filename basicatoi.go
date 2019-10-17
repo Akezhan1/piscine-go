@@ -3,7 +3,7 @@ package main
 func BasicAtoi(s string) {
 	runes := []rune(s)
 	var final int
-	var res []int = make([]int, len(runes))
+	var res []int
 	n := '0'
 	v := 0
 	for i, c := range runes {
@@ -11,7 +11,7 @@ func BasicAtoi(s string) {
 			n++
 			v++
 		}
-		res[i] = v
+		res = append(res, v)
 	}
 	for i := range runes {
 		final = final*10 + res[i]
