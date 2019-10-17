@@ -1,4 +1,4 @@
-package main
+package swap
 
 func Swap(a *int, b *int) {
 	d := *a
