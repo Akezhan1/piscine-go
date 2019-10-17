@@ -5,7 +5,7 @@ func BasicAtoi(s string) {
 	var res []int = make([]int, len(runes))
 	n := '0'
 	v := 0
-	for i ,c := range runes {
+	for i, c := range runes {
 		for n != c {
 		n++
 		v++
