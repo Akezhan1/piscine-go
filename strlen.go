@@ -6,5 +6,5 @@ func StrLen(str string) int {
 	for i := range strrune {
 		a = i
 	}
-	return a
+	return a-1
 }
