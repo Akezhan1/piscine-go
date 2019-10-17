@@ -6,8 +6,8 @@ func BasicAtoi2(s string) int {
 		a := 0
 		if val > '1' && val < '9' {
 			for i := '1'; i <= val; i++ {
-			a++
-			res = res*10 + a
+				a++
+				res = res*10 + a
 			}
 		} else {
 			res = 0
