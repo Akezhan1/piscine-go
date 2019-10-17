@@ -1,4 +1,5 @@
 package basicatoi
+
 func BasicAtoi(s string) {
 	res := 0
 	for _, val := range s {
