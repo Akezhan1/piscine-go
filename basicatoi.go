@@ -12,7 +12,6 @@ func BasicAtoi(s string) {
 		}
 		res[i] = v
 	}
-
 	for i := range runes {
 		final = final*10 + res[i]
 	}
