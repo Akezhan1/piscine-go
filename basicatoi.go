@@ -8,8 +8,8 @@ func BasicAtoi(s string) {
 	v := 0
 	for i, c := range runes {
 		for n != c {
-		n++
-		v++
+			n++
+			v++
 		}
 		res[i] = v
 	}
