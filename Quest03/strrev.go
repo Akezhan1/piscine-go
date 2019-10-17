@@ -13,6 +13,5 @@ func StrRev(str string) string {
 		revstr[i] = strrune[a]
 		a--
 	}
-
 	return string(revstr)
 }
