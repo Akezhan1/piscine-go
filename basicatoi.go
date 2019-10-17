@@ -1,4 +1,5 @@
 package basicatoi
+
 func BasicAtoi(s string) {
 	runes := []rune(s)
 	var final int
