@@ -1,22 +1,12 @@
-package main
+package basicatoi
 
 func BasicAtoi(s string) {
-	runes := []rune(s)
-	var final int
-	var res []int = make([]int, len(runes))
-	n := '0'
-	v := 0
-	for i ,c:= range runes {
-		for n != c {
-		n++
-		v++
+	res := 0
+	for _, val := range s {
+		a := 0
+		for i := '1'; i <= val; i++ {
+			a++
 		}
-		res[i] = v
+		res = res*10 + a
 	}
-
-	for i := range runes {
-		final = final*10 + res[i]
-	}
-
-	fmt.Println(final)
 }
