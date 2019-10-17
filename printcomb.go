@@ -3,7 +3,7 @@ package printcomb
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	var a,b,c rune = '0','1','2'
+	var a, b, c rune = '0', '1', '2'
 	for i := a; i <= 54; i++ {
 		for k := b; k <= 56; k++ {
 			for j := c; j <= 57; j++ {
@@ -22,4 +22,5 @@ func PrintComb() {
 	z01.PrintRune(55)
 	z01.PrintRune(56)
 	z01.PrintRune(57)
+	z01.PrintRune(10)
 }
