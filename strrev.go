@@ -1,5 +1,4 @@
 package strrev
-
 func StrRev(str string) string {
 	revstr := []rune(str)
 	strrune := []rune(str)
@@ -13,6 +12,5 @@ func StrRev(str string) string {
 		revstr[i] = strrune[a]
 		a--
 	}
-
 	return string(revstr)
 }
