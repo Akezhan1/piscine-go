@@ -1,6 +1,6 @@
 package basicatoi
 
-func BasicAtoi(s string) {
+func BasicAtoi(s string) int {
 	res := 0
 	for _, val := range s {
 		a := 0
@@ -9,4 +9,5 @@ func BasicAtoi(s string) {
 		}
 		res = res*10 + a
 	}
+	return res
 }
