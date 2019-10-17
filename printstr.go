@@ -6,6 +6,6 @@ func PrintStr(str string) {
 	strrune := []rune(str)
 	for i := range strrune {
 		z01.PrintRune(strrune[i])
-		z01.PrintRune(10)
 	}
+	z01.PrintRune(10)
 }
