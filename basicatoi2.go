@@ -11,6 +11,7 @@ func BasicAtoi2(s string) int {
 		} else {
 			res = 0
 		}
+		}
 	}
 	return res
 }
