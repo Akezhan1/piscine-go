@@ -1,4 +1,6 @@
-package sortintgertable
+package main
+
+import "fmt"
 
 func SortIntegerTable(table []int) {
 	sort := false
@@ -6,6 +8,7 @@ func SortIntegerTable(table []int) {
 	for i := range table {
 		b = i
 	}
+	b = b+1
 	for !sort {
 		swap := false
 		for i := 0; i < b-1; i++ {
@@ -18,4 +21,10 @@ func SortIntegerTable(table []int) {
 			sort = true
 		}
 	}
+}
+
+func main() {
+	i := []int{-1,5,4,-8,5,-3}
+	SortIntegerTable(i)
+	fmt.Println(i)
 }
