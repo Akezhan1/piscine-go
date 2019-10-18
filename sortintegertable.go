@@ -6,9 +6,10 @@ func SortIntegerTable(table []int) {
 	for i := range table {
 		b = i
 	}
+	b = b + 1
 	for !sort {
 		swap := false
-		for i := 0; i < b+1; i++ {
+		for i := 0; i < b-1; i++ {
 			if table[i+1] < table[i] {
 				table[i+1], table[i] = table[i], table[i+1]
 				swap = true
