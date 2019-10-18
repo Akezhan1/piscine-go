@@ -2,8 +2,7 @@ package atoi
 
 func Atoi(s string) int {
     res := 0
-    for _,
-    val: = range s {
+    for _, val: = range s {
         if s[1] == '+' || s[1] == '-' {
             return 0
         }
@@ -12,15 +11,13 @@ func Atoi(s string) int {
                 return 0
             }
             a: = 0
-            for i: = '1';
-            i <= val;
-            i++{
+            for i: = '1'; i <= val; i++{
                 a++
             }
             res = res * 10 + a
         } else if s[0] == '-' {
             a: = 0
-            for i: = '1';i <= val;i++{
+            for i := '1'; i <= val; i++{
                 a--
             }
             res = res * 10 + a
