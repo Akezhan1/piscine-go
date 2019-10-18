@@ -14,13 +14,13 @@ func Atoi(s string) int {
                 for i := '1'; i <= val; i++{
                     a++
                 }
-                res = res * 10 + a
+                res = res*10 + a
             } else if s[0] == '-' {
                 a := 0
                 for i := '1'; i <= val; i++{
                     a--
                 }
-                res = res * 10 + a
+                res = res*10 + a
             }
         }
         return res
