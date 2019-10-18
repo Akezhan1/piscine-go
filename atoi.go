@@ -1,7 +1,7 @@
 package atoi
 
 func Atoi(s string) int {
-       res := 0
+	res := 0
 	for _, val := range s {
 		if s[1] == '+' || s[1] == '-' {
 			return 0
