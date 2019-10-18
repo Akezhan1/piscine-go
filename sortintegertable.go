@@ -1,5 +1,4 @@
 package sortintgertable
-
 func SortIntegerTable(table []int) {
 	sort := false
 	var b int
