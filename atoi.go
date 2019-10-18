@@ -2,10 +2,7 @@ package atoi
 
 func Atoi(s string) int {
 	res := 0
-	for _, val := range s {
-		if val == ' ' {
-			return 0
-		}
+	for i, val := range s {
 		if s[1] == '+' || s[1] == '-' {
 			return 0
 		}
@@ -24,6 +21,11 @@ func Atoi(s string) int {
 				a--
 			}
 			res = res*10 + a
+		}
+		if i > 0 {
+			if !(val >= '0' && val <= '9') {
+				return 0
+			}
 		}
 	}
 	return res
