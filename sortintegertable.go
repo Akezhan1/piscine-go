@@ -8,7 +8,7 @@ func SortIntegerTable(table []int) {
 	}
 	for !sort {
 		swap := false
-		for i := 0; i <= b; i++ {
+		for i := 0; i < b+1; i++ {
 			if table[i+1] < table[i] {
 				table[i+1], table[i] = table[i], table[i+1]
 				swap = true
