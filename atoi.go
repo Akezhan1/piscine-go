@@ -1,4 +1,5 @@
 package atoi
+
 func Atoi(s string) int {
     res := 0
     for _, val := range s {
