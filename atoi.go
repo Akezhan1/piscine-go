@@ -2,8 +2,8 @@ package atoi
 
 func Atoi(s string) int {
 	res := 0
-	for _, val := range s {
-		if s[1] == '+' || s[1] == '-' {
+	for i, val := range s {
+		if s[i+1] == '+' || s[i+1] == '-' {
 			return 0
 		}
 		if s[0] >= '0' && s[0] <= '9' || s[0] == '+' {
