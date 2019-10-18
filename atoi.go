@@ -24,8 +24,3 @@ func Atoi(s string) int {
         }
     }
     return res
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 0d6271c8a94fefb34acbfebc3130eff9c44dd2f6
