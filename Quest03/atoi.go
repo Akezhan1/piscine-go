@@ -20,7 +20,7 @@ func Atoi(s string) int {
             res = res * 10 + a
 		}
 		if i > 0 {
-			if !(val >= '0' && val <= '9') {
+			if val != '0' && val != '9') {
 				return 0
 			}
 		}
