@@ -23,6 +23,5 @@ func Atoi(s string) int {
 			res = res*10 + a
 		} 
 	}
-
 	return res
 }
