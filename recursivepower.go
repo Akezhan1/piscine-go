@@ -1,4 +1,4 @@
-package recursivepower
+package student
 
 func RecursivePower(nb int, power int) int {
 	res := 1
