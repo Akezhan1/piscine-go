@@ -1,15 +1,13 @@
 package student
 
-import "fmt"
-
-func fib(x int) int {
+func Fibonacci(x int) int {
 	res := 0
-	if x < 0{
+	if x < 0 {
 		return -1
 	} else if x < 2 {
 		return x
 	} else {
-		res = (fib(x-1) + fib(x-2))
+		res = (Fibonacci(x-1) + Fibonacci(x-2))
 	}
 	return res
 }
