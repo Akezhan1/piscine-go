@@ -1,4 +1,4 @@
-package piscine
+package student
 
 func RecursiveFactorial(nb int) int {
 	res := 1
