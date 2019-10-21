@@ -1,4 +1,4 @@
-package sqrt
+package student
 
 func Sqrt(n int) int {
 	for i := 0; i <= n; i++ {
