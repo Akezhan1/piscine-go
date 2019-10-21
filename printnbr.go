@@ -2,30 +2,27 @@ package student
 
 import "github.com/01-edu/z01"
 
-func ToString(n int) string {
-	buf := [11]byte{}
-	pos := len(buf)
-	i := n
-	signed := i < 0
-	if signed {
-		i = -i
-	}
-	for {
-		pos--
-		buf[pos], i = '0'+byte(i%10), i/10
-		if i == 0 {
-			if signed {
-				pos--
-				buf[pos] = '-'
-			}
-			return string(buf[pos:])
-		}
-	}
-}
-
 func PrintNbr(n int) {
-	a := ToString(n)
-	for _, val := range a {
-		z01.PrintRune(val)
+	if n < 0 {
+		z01.PrintRune('-')
+		if n/10 != 0 {
+			PrintNbr(n / -10)
+		}
+		mod := '0'
+		for i := 0; i < -(n % 10); i++ {
+			mod++
+		}
+		z01.PrintRune(mod)
+	} else if n == 0 {
+		z01.PrintRune('0')
+	} else {
+		if n/10 != 0 {
+			PrintNbr(n / 10)
+		}
+		mod := '0'
+		for i := 0; i < n%10; i++ {
+			mod++
+		}
+		z01.PrintRune(mod)
 	}
 }
