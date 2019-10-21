@@ -11,7 +11,6 @@ func IterativeFactorial(y int) int {
 			res = i * res
 		}
 	}
-	
 	if res < 0 {
 		return 0
 	}
