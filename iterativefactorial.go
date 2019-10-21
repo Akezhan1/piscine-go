@@ -9,7 +9,7 @@ func IterativeFactorial(y int) int {
 			res = i * res
 		}
 	}
-	if res < 0 {
+	if res < 0 || res > 50 {
 		return 0
 	}
 	return res
