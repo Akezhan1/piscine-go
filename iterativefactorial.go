@@ -5,7 +5,7 @@ func IterativeFactorial(y int) int {
 	if y < 0 || y > 50 {
 		return 0
 	} else if y == 0 {
-		return 0
+		return 1
 	} else {
 		for i := 1; i <= y; i++ {
 			res = i * res
