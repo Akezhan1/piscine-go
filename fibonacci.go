@@ -1,6 +1,6 @@
 package student
 
-func fib(x int) int {
+func FIbonacci(x int) int {
 	res := 0
 	if x < 0 {
 		return -1
