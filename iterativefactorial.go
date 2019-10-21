@@ -1,4 +1,4 @@
-package piscine
+package student
 
 func IterativeFactorial(y int) int {
 	res := 1
