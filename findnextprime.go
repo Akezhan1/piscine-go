@@ -17,11 +17,15 @@ func isprime(nb int) bool {
 }
 
 func FindNextPrime(n int) int {
-	for i := 0; i <= n; i++ {
-		if isprime(n) == false {
-			n++
-		} else {
-			break
+	if n < 0 {
+		return 2
+	} else {
+		for i := 0; i <= n; i++ {
+			if isprime(n) == false {
+				n++
+			} else {
+				break
+			}
 		}
 	}
 	return n
