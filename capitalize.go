@@ -4,10 +4,10 @@ func Capitalize(s string) string {
 	srunes := []rune(s)
 	len := 0
 	for i := range srunes {
-		len = i
+		len = i+1
 	}
 	ok := false
-	for i := 0; i < len+1; i++ {
+	for i := 0; i < len; i++ {
 		if trust(srunes[i]) == true && ok {
 			if srunes[i] >= 'a' && srunes[i] <= 'z' {
 				srunes[i] = ToUpper(srunes[i])
