@@ -16,7 +16,7 @@ func ToUpper(s rune) rune {
 
 func ToLower(s rune) rune {
 	if s+32 > 122 {
-		return s	
+		return s
 	}
 	return rune(s + 32)
 }
