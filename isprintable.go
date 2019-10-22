@@ -1,6 +1,6 @@
 package student
 
-func IsUpper(str string) bool {
+func IsPrintable(str string) bool {
 	runes := []rune(str)
 	ok := true
 	for _, i := range runes {
