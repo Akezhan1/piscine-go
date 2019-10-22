@@ -2,8 +2,11 @@ package student
 
 func Capitalize(s string) string {
 	srunes := []rune(s)
+	len := 0
+	for i := range srunes {
+		len = i
 	ok := false
-	for i := 0; i < len(s); i++ {
+	for i := 0; i < len+1; i++ {
 		if trust(srunes[i]) == true && ok {
 			if srunes[i] >= 'a' && srunes[i] <= 'z' {
 				srunes[i] = ToUpper(srunes[i])
