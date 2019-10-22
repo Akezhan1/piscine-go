@@ -7,9 +7,6 @@ func TrimAtoi(s string) int {
 
 	if s != "" {
 		for i, n := range s1 {
-			if i == 0 {
-				return 0
-			}
 			y := 0
 			if n < '0' || n > '9' {
 				if n == '-' || n == '+' {
@@ -43,19 +40,22 @@ func AlphaCount(str string) []rune {
 	for i := range str {
 		len = i
 	}
-	for i := 0; i <= len; i++ {
-		if str[i] >= '0' && str[i] <= '9' || str[i] == '-' {
-			res = append(res, rune(str[i]))
+	if len == 0 {
+	} else {
+		for i := 0; i <= len; i++ {
+			if str[i] >= '0' && str[i] <= '9' || str[i] == '-' {
+				res = append(res, rune(str[i]))
+			}
 		}
-	}
-	for i := range res {
-		if res[i] == '-' {
-			if i == 0 {
-				return res
-			} else {
-				for i := 0; i <= len; i++ {
-					if str[i] >= '0' && str[i] <= '9' {
-						final = append(final, rune(str[i]))
+		for i := range res {
+			if res[i] == '-' {
+				if i == 0 {
+					return res
+				} else {
+					for i := 0; i <= len; i++ {
+						if str[i] >= '0' && str[i] <= '9' {
+							final = append(final, rune(str[i]))
+						}
 					}
 				}
 			}
