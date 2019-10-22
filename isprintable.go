@@ -4,10 +4,10 @@ func IsPrintable(str string) bool {
 	runes := []rune(str)
 	ok := true
 	for _, i := range runes {
-		if !(i >= 'A' && i <= 'Z') || !(i >= 'a' && i <= 'z') {
+		if i >= 0 && i <= 31 {
+			ok = false
 			return ok
 		}
-		ok = false
 	}
 	return ok
 }
