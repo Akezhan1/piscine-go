@@ -5,9 +5,9 @@ func IsPrintable(str string) bool {
 	ok := true
 	for _, i := range runes {
 		if !(i >= 'A' && i <= 'Z') || !(i >= 'a' && i <= 'z') {
-			ok = false
 			return ok
 		}
+		ok = false
 	}
 	return ok
 }
