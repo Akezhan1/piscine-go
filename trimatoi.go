@@ -7,6 +7,9 @@ func TrimAtoi(s string) int {
 
 	if s != "" {
 		for i, n := range s1 {
+			if i == 0 {
+				return 0
+			}
 			y := 0
 			if n < '0' || n > '9' {
 				if n == '-' || n == '+' {
@@ -28,8 +31,6 @@ func TrimAtoi(s string) int {
 			}
 			x = x*10 + y
 		}
-	} else {
-		return 0
 	}
 	return x * k
 }
