@@ -19,7 +19,7 @@ func Compare(a, b string) int {
 	case len < count:
 		return 1
 	case len > count:
-		return -1
+		return 1
 	}
 	return len
 }
