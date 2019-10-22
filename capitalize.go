@@ -5,6 +5,7 @@ func Capitalize(s string) string {
 	len := 0
 	for i := range srunes {
 		len = i
+	}
 	ok := false
 	for i := 0; i < len+1; i++ {
 		if trust(srunes[i]) == true && ok {
