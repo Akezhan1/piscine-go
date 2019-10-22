@@ -4,7 +4,7 @@ func Capitalize(s string) string {
 	srunes := []rune(s)
 	len := 0
 	for i := range s {
-		len = i+1
+		len = i + 1
 	}
 	for i := 0; i < len; i++ {
 		if srunes[i] == ' ' || srunes[i] == '+' || srunes[i] == '-' {
