@@ -1,4 +1,4 @@
-package main
+package student
 
 func TrimAtoi(s string) int {
 	x := 0
