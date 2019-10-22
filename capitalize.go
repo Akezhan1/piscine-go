@@ -8,10 +8,16 @@ func trust(a rune) bool {
 }
 
 func ToUpper(s rune) rune {
+	if s-32 < 65 {
+		return s
+	}
 	return rune(s - 32)
 }
 
 func ToLower(s rune) rune {
+	if s+32 > 122 {
+		return s
+	}
 	return rune(s + 32)
 }
 
@@ -28,7 +34,7 @@ func Capitalize(s string) string {
 			if srunes[i] >= 'a' && srunes[i] <= 'z' {
 				srunes[i] = ToUpper(srunes[i])
 			} else if srunes[i] >= '0' && srunes[i] <= '9' {
-				srunes[i+1] = ToLower(srunes[i+1])]
+				srunes[i+1] = ToLower(srunes[i+1])
 			}
 			ok = false
 		} else if srunes[i] >= 'A' && srunes[i] <= 'Z' {
