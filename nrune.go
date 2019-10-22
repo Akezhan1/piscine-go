@@ -10,7 +10,7 @@ func NRune(s string, n int) rune {
 	if n > len {
 		return 0
 	}
-	for i := 1; i <= n; i++ {
+	for i := 1; i < n; i++ {
 		final = n
 	}
 	return runes[final]
