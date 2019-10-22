@@ -11,7 +11,7 @@ func NRune(s string, n int) rune {
 		return 0
 	}
 	for i := 1; i < n; i++ {
-		final = n
+		final = i
 	}
 	return runes[final]
 }
