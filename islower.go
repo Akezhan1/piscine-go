@@ -1,6 +1,6 @@
 package student
 
-func IsALower(str string) bool {
+func IsLower(str string) bool {
 	runes := []rune(str)
 	ok := false
 	for _, i := range runes {
