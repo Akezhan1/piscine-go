@@ -28,6 +28,8 @@ func TrimAtoi(s string) int {
 			}
 			x = x*10 + y
 		}
+	} else {
+		return 0
 	}
 	return x * k
 }
