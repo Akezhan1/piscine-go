@@ -28,7 +28,7 @@ func Capitalize(s string) string {
 			if srunes[i] >= 'a' && srunes[i] <= 'z' {
 				srunes[i] = ToUpper(srunes[i])
 			} else if srunes[i] >= '0' && srunes[i] <= '9' {
-				srunes[i+1] = ToLower(srunes[i+1])]
+				srunes[i+1] = ToLower(srunes[i+1])
 			}
 			ok = false
 		} else if srunes[i] >= 'A' && srunes[i] <= 'Z' {
