@@ -15,7 +15,7 @@ func Capitalize(s string) string {
 			ok = false
 		} else if srunes[i] >= 'A' && srunes[i] <= 'Z' {
 			if i == 0 {
-				continuation
+				continue
 			}
 			srunes[i] = ToLower(srunes[i])
 		} else if trust(srunes[i]) == false {
