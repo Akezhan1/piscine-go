@@ -1,6 +1,6 @@
 package student
 
-func compare(a, b string) int {
+func Compare(a, b string) int {
 	arunes := []rune(a)
 	brunes := []rune(b)
 	count := 0
