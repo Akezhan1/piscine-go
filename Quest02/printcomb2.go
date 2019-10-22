@@ -1,22 +1,29 @@
-package main
+package student
 
 import "github.com/01-edu/z01"
 
-func PrintComb() {
-	var a, b, c, d rune = '0', '0', '0', '1'
-	for i := c; i <= 57; i++ {
-		for k := d; k <= 57; k++ {
-				if i <= k {
-						z01.PrintRune(a)
-						z01.PrintRune(b)
-						z01.PrintRune(32)
-						z01.PrintRune(i)
-						z01.PrintRune(k)
+func PrintComb2() {
+
+	for i := '0'; i <= '9'; i++ {
+		for j := '0'; j <= '9'; j++ {
+			for h := '0'; h <= '9'; h++ {
+				for k := '0'; k <= '9'; k++ {
+					if i > h || (i == h && j >= k) {
+						continue
+					}
+					z01.PrintRune(i)
+					z01.PrintRune(j)
+					z01.PrintRune(32)
+					z01.PrintRune(h)
+					z01.PrintRune(k)
+					if !(i == '9' && j == '8' && h == '9' && k == '9') {
 						z01.PrintRune(44)
 						z01.PrintRune(32)
 					}
+
 				}
 			}
 		}
 	}
+	z01.PrintRune(10)
 }
