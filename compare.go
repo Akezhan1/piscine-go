@@ -1,10 +1,5 @@
-package main
+package student
 
-<<<<<<< HEAD
-import "fmt"
-
-=======
->>>>>>> 5f92a4b19cc66ebbcf532ec0932596489a9e7172
 func Compare(a, b string) int {
 	arunes := []rune(a)
 	brunes := []rune(b)
@@ -20,7 +15,6 @@ func Compare(a, b string) int {
 	}
 	if len == count {
 		return 0
-<<<<<<< HEAD
 	}
 
 	for i := range a {
@@ -32,12 +26,10 @@ func Compare(a, b string) int {
 				return -1
 			}
 		}
-=======
 	case len < count:
 		return 1
 	case len > count:
 		return 1
->>>>>>> 5f92a4b19cc66ebbcf532ec0932596489a9e7172
 	}
 	return len
 }
