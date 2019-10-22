@@ -8,10 +8,16 @@ func trust(a rune) bool {
 }
 
 func ToUpper(s rune) rune {
+	if s - 32 < 64 {
+		return s
+	}
 	return rune(s - 32)
 }
 
 func ToLower(s rune) rune {
+	if s + 32 > 122 {
+		return s	
+	}
 	return rune(s + 32)
 }
 
