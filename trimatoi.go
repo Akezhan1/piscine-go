@@ -1,4 +1,6 @@
-package student
+package main
+
+import "fmt"
 
 func TrimAtoi(s string) int {
 	x := 0
@@ -15,9 +17,6 @@ func TrimAtoi(s string) int {
 					}
 					if n == '-' {
 						k = -1
-					}
-					if n == '+' {
-						k = 1
 					}
 				} else {
 					return 0
@@ -40,26 +39,28 @@ func AlphaCount(str string) []rune {
 	for i := range str {
 		len = i
 	}
-	if len == 0 {
-	} else {
-		for i := 0; i <= len; i++ {
-			if str[i] >= '0' && str[i] <= '9' || str[i] == '-' {
-				res = append(res, rune(str[i]))
-			}
+	for i := 0; i <= len; i++ {
+		if str[i] >= '0' && str[i] <= '9' || str[i] == '-' {
+			res = append(res, rune(str[i]))
 		}
-		for i := range res {
-			if res[i] == '-' {
-				if i == 0 {
-					return res
-				} else {
-					for i := 0; i <= len; i++ {
-						if str[i] >= '0' && str[i] <= '9' {
-							final = append(final, rune(str[i]))
-						}
+	}
+	for i := range res {
+		if res[i] == '-' {
+			if i == 0 {
+				return res
+			} else {
+				for i := 0; i <= len; i++ {
+					if str[i] >= '0' && str[i] <= '9' {
+						final = append(final, rune(str[i]))
 					}
 				}
 			}
+			return final
 		}
 	}
-	return final
+	return res
+}
+
+func main() {
+	fmt.Println(TrimAtoi("1afaf2afaf5-affa6"))
 }
