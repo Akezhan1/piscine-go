@@ -1,6 +1,9 @@
 package student
 
 func TrimAtoi(s string) int {
+	if s == "" {
+		return 0
+	}
 	x := 0
 	k := 1
 	s1 := AlphaCount(s)
