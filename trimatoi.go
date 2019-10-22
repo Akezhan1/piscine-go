@@ -1,8 +1,9 @@
-package main
-
-import "fmt"
+package student
 
 func TrimAtoi(s string) int {
+	if s == "" {
+		return 0
+	}
 	x := 0
 	k := 1
 	s1 := AlphaCount(s)
@@ -59,8 +60,4 @@ func AlphaCount(str string) []rune {
 		}
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(TrimAtoi("1afaf2afaf5-affa6"))
 }
