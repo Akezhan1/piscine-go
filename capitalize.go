@@ -8,6 +8,9 @@ func Capitalize(s string) string {
 		len = i + 1
 	}
 	for i := 0; i <= len; i++ {
+		if i == len {
+			break
+		}
 		if srunes[i] == ' ' || srunes[i] == '+' || srunes[i] == '-' {
 			temp = srunes[i+1]
 			srunes[i+1] = ToUpper(temp)
