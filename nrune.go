@@ -5,13 +5,14 @@ func NRune(s string, n int) rune {
 	len := 0
 	final := 0
 	for i := range runes {
-		len = i
+		len = i + 1
 	}
 	if n > len {
 		return 0
+	} else if n <= 0 {
+		return '\x00'
 	}
-	for i := 1; i <= n; i++ {
-		final = n
+	for i := 0; i < n; i++ {
+		final = i
 	}
-	return runes[final]
-}
+	
