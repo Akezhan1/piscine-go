@@ -40,7 +40,7 @@ func ToMassive(n int) []int {
 	return res
 }
 
-func PrintNbr(n int) {
+func PrintNbrInOrder(n int) {
 	if n < 0 {
 	} else if n == 0 {
 		z01.PrintRune('0')
