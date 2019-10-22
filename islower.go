@@ -8,7 +8,6 @@ func IsLower(str string) bool {
 			ok = false
 			return ok
 		}
-		ok
 	}
 	return ok
 }
