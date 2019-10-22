@@ -1,4 +1,4 @@
-package main
+package student
 
 func trust(a rune) bool {
 	if (a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z') || (a >= '0' && a <= '9') {
