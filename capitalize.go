@@ -7,7 +7,7 @@ func Capitalize(s string) string {
 	for i := range s {
 		len = i + 1
 	}
-	for i := 0; i < len; i++ {
+	for i := 0; i <= len; i++ {
 		if srunes[i] == ' ' || srunes[i] == '+' || srunes[i] == '-' {
 			temp = srunes[i+1]
 			srunes[i+1] = ToUpper(temp)
