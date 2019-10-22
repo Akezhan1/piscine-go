@@ -4,7 +4,7 @@ func IsALower(str string) bool {
 	runes := []rune(str)
 	ok := false
 	for _, i := range runes {
-		if !(i >= 'a' && r <= 'z') {
+		if !(i >= 'a' && i <= 'z') {
 			return ok
 		}
 		ok = true
