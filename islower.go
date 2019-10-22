@@ -1,6 +1,6 @@
 package student
 
-func IsAlpha(str string) bool {
+func IsLower(str string) bool {
 	len := 0
 	count := 0
 	for i := range str {
