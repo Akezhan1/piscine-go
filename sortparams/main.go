@@ -13,8 +13,8 @@ func main() {
 		len = i
 	}
 
-	for i := 1; i < len; i++ {
-		for j := i + 1; j < len; j++ {
+	for i := 1; i <= len; i++ {
+		for j := i + 1; j <= len; j++ {
 			if arguments[i] > arguments[j] {
 				arguments[i], arguments[j] = arguments[j], arguments[i]
 			}
