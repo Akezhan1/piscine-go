@@ -2,8 +2,7 @@ package student
 
 func MakeRange(min, max int) []int {
 	if min > max || min == max {
-		res := make([]int, 0)
-		return res
+		return []int(nil)
 	}
 	len := max - min
 	res := make([]int, len)
