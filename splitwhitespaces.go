@@ -22,7 +22,7 @@ func SplitWhiteSpaces(str string) []string {
 	res := make([]string, len)
 	check := true
 	k := 0
-	for i := 0; i <= len2; i++ {
+	for i := 0; i < len2; i++ {
 		if str[i] == ' ' || str[i] == '\t' || str[i] == '\n' {
 			if !check {
 				k++
