@@ -1,22 +1,43 @@
-package student
+package main
+
+import "fmt"
 
 func SplitWhiteSpaces(str string) []string {
-	temp := ""
-	res := []string{}
 	len := 0
-	for i := range str {
-		len = i
+	len2 := 0
+	for _, i := range str {
+		if i == ' ' || i == '\t' || i == '\n' {
+			len++
+		}
 	}
-	for i := 0; i < len+1; i++ {
-		if i == len && string(str[i]) != " " && string(str[i]) != "\t" && string(str[i]) != "\n" {
+	for i := range str {
+		len2 = i
+	}
+	res := make([]string, len+1)
+	temp := ""
+	check := true
+	k := 0
+	for i := 0; i <= len2; i++ {
+		if i == len2 {
 			temp += string(str[i])
-			res = append(res, temp)
-		} else if string(str[i]) != " " && string(str[i]) != "\t" && string(str[i]) != "\n" {
-			temp += string(str[i])
-		} else {
-			res = append(res, temp)
+			res[k] = temp
+		} else if str[i] == ' ' || str[i] == '\t' || str[i] == '\n' {
+			res[k] = temp
 			temp = ""
+			check = false
+			if !check {
+				k++
+			}
+			check = true
+			continue
+		} else {
+			temp += string(str[i])
 		}
 	}
 	return res
+}
+
+func main() {
+	str := "Hello how are you?"
+	fmt.Println(SplitWhiteSpaces(str))
 }
