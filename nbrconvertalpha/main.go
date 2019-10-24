@@ -20,7 +20,7 @@ func main() {
 	}
 
 	if flag {
-		for i := 1; i <= len; i++ {
+		for i := 2; i <= len; i++ {
 			z01.PrintRune(ToUpper(ConvertToLetter(arg[i])))
 		}
 		z01.PrintRune(10)
