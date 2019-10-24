@@ -25,7 +25,7 @@ func main() {
 		}
 		z01.PrintRune(10)
 	} else {
-		for i := 1; i <= len; i++ {
+		for i := 0; i <= len; i++ {
 			z01.PrintRune(ConvertToLetter(arg[i]))
 		}
 		z01.PrintRune(10)
