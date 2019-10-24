@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package student
 
 func SplitWhiteSpaces(str string) []string {
 	len := 0
@@ -35,9 +33,4 @@ func SplitWhiteSpaces(str string) []string {
 		}
 	}
 	return res
-}
-
-func main() {
-	str := "Hello how are you?"
-	fmt.Println(SplitWhiteSpaces(str))
 }
