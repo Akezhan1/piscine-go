@@ -1,7 +1,5 @@
 package student
 
-import "fmt"
-
 func SplitWhiteSpaces(str string) []string {
 	ln := 0
 	ok2 := false
