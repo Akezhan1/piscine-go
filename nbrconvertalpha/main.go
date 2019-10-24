@@ -25,4 +25,3 @@ func main() {
 		z01.PrintRune(10)
 	}
 }
-
