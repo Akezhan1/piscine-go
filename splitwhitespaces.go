@@ -1,36 +1,35 @@
 package student
 
+import "fmt"
+
 func SplitWhiteSpaces(str string) []string {
-	len := 0
-	len2 := 0
-	for _, i := range str {
-		if i == ' ' || i == '\t' || i == '\n' {
-			len++
+	ln := 0
+	ok2 := false
+	for c := range str {
+		if ok2 && c != 0 && (str[c-1] == '\n' || str[c-1] == '\t' || str[c-1] == ' ') && str[c] != '\n' && str[c] != '\t' && str[c] != ' ' {
+			ln++
+		}
+		if str[c] != '\n' && str[c] != '\t' && str[c] != ' ' {
+			ok2 = true
 		}
 	}
-	for i := range str {
-		len2 = i
-	}
-	res := make([]string, len+1)
-	temp := ""
-	check := true
-	k := 0
-	for i := 0; i <= len2; i++ {
-		if i == len2 {
-			temp += string(str[i])
-			res[k] = temp
-		} else if str[i] == ' ' || str[i] == '\t' || str[i] == '\n' {
-			res[k] = temp
-			temp = ""
-			check = false
-			if !check {
-				k++
+	ln++
+
+	fmt.Println(ln)
+
+	x := 0
+	ans := make([]string, ln)
+	ok := true
+	for _, c := range str {
+		if c == '\n' || c == '\t' || c == ' ' {
+			if !ok {
+				x++
 			}
-			check = true
+			ok = true
 			continue
-		} else {
-			temp += string(str[i])
 		}
+		ans[x] = ans[x] + string(c)
+		ok = false
 	}
-	return res
+	return ans
 }
