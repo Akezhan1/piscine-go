@@ -1,57 +1,28 @@
+
 package main
 
 import (
 	"os"
-
 	"github.com/01-edu/z01"
 )
 
 func main() {
-	arg := os.Args[1:]
-	len := 0
-	flag := false
-	for i := range arg {
-		len = i
-	}
-	for _, val := range arg {
-		if val == "--upper" {
-			flag = true
+	lenIndex := 0
+	letterBool := false
+	letterIndex := 96
+	for index, key := range os.Args {
+		lenIndex = index
+		if key == "---upper" {
+			letterBool = true
 		}
 	}
-
-	if flag {
-		for i := 1; i <= len; i++ {
-			z01.PrintRune(ToUpper(ConvertToLetter(arg[i])))
-		}
-		z01.PrintRune(10)
-	} else {
-		for i := 0; i <= len; i++ {
-			z01.PrintRune(ConvertToLetter(arg[i]))
+	if letterBool == true {
+		letterIndex = 64
+	}
+	for i := 1; i <= lenIndex; i++ {
+		for _, key := range os.Args[i] {
+			z01.PrintRune(key + rune(letterIndex))
 		}
 		z01.PrintRune(10)
 	}
 
-}
-
-func ConvertToLetter(s string) rune {
-	numb := 0
-	for _, i := range s {
-		count := 0
-		for k := '0'; k < i; k++ {
-			count++
-		}
-		numb = numb*10 + count
-	}
-	numb = numb + 96
-	if numb >= 123 {
-		return ' '
-	}
-	return rune(numb)
-}
-
-func ToUpper(r rune) rune {
-	if r-32 < 65 {
-		return r
-	}
-	return r - 32
-}
