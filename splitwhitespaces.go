@@ -12,9 +12,6 @@ func SplitWhiteSpaces(str string) []string {
 		}
 	}
 	ln++
-
-	fmt.Println(ln)
-
 	x := 0
 	ans := make([]string, ln)
 	ok := true
