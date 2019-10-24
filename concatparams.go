@@ -7,7 +7,7 @@ func ConcatParams(args []string) string {
 			res = val
 			continue
 		}
-		res += string('\n') + val
+		res += "\n" + val
 	}
 	return res
 }
